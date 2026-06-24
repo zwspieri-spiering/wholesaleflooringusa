@@ -1,0 +1,220 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>styles.css printable view</title>
+  <style>
+    :root { color-scheme: light; }
+    body { margin: 0; background: #f2f4f8; font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; }
+    .sheet {
+      max-width: 1100px;
+      margin: 24px auto;
+      background: #ffffff;
+      border: 1px solid #d9dee7;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .head {
+      padding: 14px 18px;
+      background: #0f172a;
+      color: #e2e8f0;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.2px;
+    }
+    pre {
+      margin: 0;
+      padding: 20px;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 18px;
+      line-height: 1.45;
+      color: #0b1324;
+      background: #ffffff;
+    }
+    @media print {
+      body { background: #fff; }
+      .sheet { margin: 0; border: 0; box-shadow: none; border-radius: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <div class="head">styles.css</div>
+    <pre>:root {
+    --text: #0c131d;
+    --background: #e3edf2;
+    --primary: #9fc3d5;
+    --secondary: #2f376a;
+    --accent: #6d5fb9;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background-color: white;
+    border-bottom: 3px solid var(--primary);
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.logo-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    display: block;
+    width: auto;
+    height: 140px;
+    max-width: min(56vw, 520px);
+    object-fit: contain;
+}
+
+.phone {
+    font-weight: bold;
+}
+
+.button {
+    background-color: var(--accent);
+    color: white;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+nav {
+    background-color: var(--primary);
+    padding: 14px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    width: 88%;
+    margin: 30px auto;
+}
+
+.hero {
+    background-color: var(--secondary);
+    padding: 45px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.hero h1 {
+    margin-top: 0;
+    color: var(--primary);
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: white;
+    padding: 30px;
+    border: 2px solid var(--secondary);
+    border-radius: 8px;
+}
+
+.card h2 {
+    color: var(--accent);
+}
+
+ul {
+    padding-left: 22px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+button {
+    margin-top: 18px;
+    padding: 12px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--accent);
+}
+
+footer {
+    background-color: var(--text);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: white;
+}
+
+@media (max-width: 760px) {
+    header {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .logo-img {
+        height: 100px;
+        max-width: 70vw;
+    }
+}
+</pre>
+  </main>
+</body>
+</html>
