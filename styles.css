@@ -45,6 +45,7 @@ header {
 
 .phone {
     font-weight: bold;
+    color: var(--secondary);
 }
 
 .button {
@@ -89,11 +90,19 @@ main {
     color: var(--primary);
 }
 
+.hero p {
+    color: #eef3ff;
+}
+
 .content-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     margin-top: 30px;
+}
+
+.products-grid {
+    grid-template-columns: 1fr 2fr;
 }
 
 .card {
@@ -105,6 +114,53 @@ main {
 
 .card h2 {
     color: var(--accent);
+}
+
+.service-photo {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    display: block;
+    margin: 10px 0 16px;
+    border: 2px solid var(--secondary);
+    border-radius: 8px;
+    background: #fff;
+}
+
+.promo-video {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    margin: 10px 0 18px;
+    border: 2px solid var(--secondary);
+    border-radius: 8px;
+    background: #000;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 540px;
+}
+
+.pricing-table th,
+.pricing-table td {
+    border: 1px solid var(--secondary);
+    padding: 10px 12px;
+    text-align: left;
+}
+
+.pricing-table th {
+    background-color: var(--secondary);
+    color: #f5f8ff;
+}
+
+.pricing-table tr:nth-child(even) {
+    background-color: #f2f6fb;
 }
 
 ul {
