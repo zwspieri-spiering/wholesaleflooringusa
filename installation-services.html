@@ -10,6 +10,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="announcement-carousel" aria-label="Semester thank-you message">
+        <div class="announcement-track">
+            <span>Thank You for a Great Semester Professor McCarthy!</span>
+            <span aria-hidden="true">Thank You for a Great Semester Professor McCarthy!</span>
+        </div>
+    </div>
+
     <header>
         <a href="index.html" class="logo-link" aria-label="Wholesale Flooring USA Home">
             <img src="logo.png" alt="Wholesale Flooring USA logo" class="logo-img">
@@ -19,12 +26,17 @@
     </header>
 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about-us.html">About Us</a>
-        <a href="featured-flooring-products.html">Flooring Products</a>
-        <a href="installation-services.html">Installation Services</a>
-        <a href="#">Specials & Deals</a>
-        <a href="index.html#estimate">Contact Us</a>
+        <div class="nav-inner">
+            <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation menu">Menu</button>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about-us.html">About Us</a>
+                <a href="featured-flooring-products.html">Flooring Products</a>
+                <a href="installation-services.html">Installation Services</a>
+                <a href="#">Specials & Deals</a>
+                <a href="index.html#estimate">Contact Us</a>
+            </div>
+        </div>
     </nav>
 
     <main>
@@ -59,5 +71,6 @@
         <p>Email: <a href="index.html#estimate">wholesaleflooringusa.inc@gmail.com</a></p>
         <p>&copy; 2026 Wholesale Flooring USA</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

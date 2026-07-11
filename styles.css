@@ -14,6 +14,38 @@ body {
     line-height: 1.6;
 }
 
+.announcement-carousel {
+    background: linear-gradient(90deg, #2f376a, #43539a, #2f376a);
+    color: #ffffff;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.35);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.announcement-track {
+    display: inline-flex;
+    align-items: center;
+    gap: 56px;
+    min-width: 200%;
+    padding: 8px 0;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+    animation: announcement-slide 16s linear infinite;
+}
+
+.announcement-track span {
+    display: inline-block;
+}
+
+@keyframes announcement-slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -58,22 +90,46 @@ header {
 
 nav {
     background-color: var(--primary);
-    padding: 14px;
+    padding: 12px 6%;
+}
+
+.nav-inner {
+    width: min(1120px, 100%);
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.nav-toggle {
+    display: none;
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.14);
+    color: white;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 10px 16px;
 }
 
-nav a {
+.nav-links a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     padding: 4px 0;
 }
 
-nav a:hover {
+.nav-links a:hover {
     text-decoration: underline;
 }
 
@@ -149,14 +205,26 @@ main {
 .pricing-table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 540px;
+    min-width: 460px;
 }
 
 .pricing-table th,
 .pricing-table td {
     border: 1px solid var(--secondary);
-    padding: 10px 12px;
+    padding: 8px 10px;
     text-align: left;
+}
+
+.pricing-table th:nth-child(1),
+.pricing-table td:nth-child(1),
+.pricing-table th:nth-child(3),
+.pricing-table td:nth-child(3) {
+    width: 34%;
+}
+
+.pricing-table th:nth-child(2),
+.pricing-table td:nth-child(2) {
+    width: 32%;
 }
 
 .pricing-table th {
@@ -223,9 +291,9 @@ footer a {
 @media (max-width: 760px) {
     header {
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 8px;
         justify-content: center;
-        padding: 18px 5%;
+        padding: 14px 4%;
         text-align: center;
     }
 
@@ -247,14 +315,42 @@ footer a {
     }
 
     nav {
-        justify-content: center;
-        gap: 8px 14px;
-        padding: 12px 6%;
+        padding: 10px 4%;
     }
 
-    nav a {
-        display: inline-block;
+    .nav-inner {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        align-self: flex-end;
+        min-height: 42px;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
         line-height: 1.35;
+        padding: 10px 12px;
+        border-radius: 6px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.14);
     }
 
     main {
@@ -263,7 +359,16 @@ footer a {
     }
 
     .hero {
-        padding: 26px 18px;
+        padding: 20px 14px;
+    }
+
+    .hero h1 {
+        margin-bottom: 8px;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        margin-bottom: 0;
     }
 
     .content-grid,
@@ -283,7 +388,7 @@ footer a {
 
 @media (min-width: 761px) and (max-width: 1024px) {
     header {
-        padding: 20px 5%;
+        padding: 16px 5%;
     }
 
     .logo-img {
@@ -292,8 +397,15 @@ footer a {
     }
 
     nav {
-        padding: 13px 4%;
-        gap: 10px 18px;
+        padding: 10px 4%;
+    }
+
+    .nav-inner {
+        gap: 10px;
+    }
+
+    .nav-links {
+        gap: 8px 14px;
     }
 
     main {
@@ -302,7 +414,7 @@ footer a {
     }
 
     .hero {
-        padding: 34px 26px;
+        padding: 28px 22px;
     }
 
     .content-grid {
@@ -315,11 +427,17 @@ footer a {
 }
 
 @media (max-width: 430px) {
+    .announcement-track {
+        gap: 34px;
+        font-size: 0.92rem;
+        padding: 7px 0;
+    }
+
     .logo-img {
         height: 105px;
     }
 
-    nav a {
+    .nav-links a {
         font-size: 0.95rem;
     }
 
