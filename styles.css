@@ -38,8 +38,8 @@ header {
 .logo-img {
     display: block;
     width: auto;
-    height: 140px;
-    max-width: min(56vw, 520px);
+    height: 170px;
+    max-width: min(62vw, 620px);
     object-fit: contain;
 }
 
@@ -49,7 +49,7 @@ header {
 }
 
 .button {
-    background-color: var(--accent);
+    background-color: var(--secondary);
     color: white;
     padding: 10px 18px;
     text-decoration: none;
@@ -59,14 +59,18 @@ header {
 nav {
     background-color: var(--primary);
     padding: 14px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 16px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 12px;
     font-weight: bold;
+    padding: 4px 0;
 }
 
 nav a:hover {
@@ -74,7 +78,7 @@ nav a:hover {
 }
 
 main {
-    width: 88%;
+    width: min(1120px, 88%);
     margin: 30px auto;
 }
 
@@ -99,6 +103,7 @@ main {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     margin-top: 30px;
+    align-items: start;
 }
 
 .products-grid {
@@ -180,6 +185,8 @@ label {
 input,
 select,
 textarea {
+    width: 100%;
+    box-sizing: border-box;
     padding: 10px;
     border: 1px solid #999;
     border-radius: 4px;
@@ -217,10 +224,111 @@ footer a {
     header {
         flex-wrap: wrap;
         gap: 10px;
+        justify-content: center;
+        padding: 18px 5%;
+        text-align: center;
     }
 
     .logo-img {
-        height: 100px;
-        max-width: 70vw;
+        height: 120px;
+        max-width: 80vw;
+    }
+
+    .phone {
+        width: 100%;
+        margin: 0;
+    }
+
+    .button {
+        width: min(100%, 320px);
+        text-align: center;
+        padding: 12px 18px;
+        box-sizing: border-box;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 8px 14px;
+        padding: 12px 6%;
+    }
+
+    nav a {
+        display: inline-block;
+        line-height: 1.35;
+    }
+
+    main {
+        width: 92%;
+        margin: 20px auto;
+    }
+
+    .hero {
+        padding: 26px 18px;
+    }
+
+    .content-grid,
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .card {
+        padding: 22px;
+    }
+
+    footer {
+        padding: 18px 14px;
+    }
+}
+
+@media (min-width: 761px) and (max-width: 1024px) {
+    header {
+        padding: 20px 5%;
+    }
+
+    .logo-img {
+        height: 140px;
+        max-width: 56vw;
+    }
+
+    nav {
+        padding: 13px 4%;
+        gap: 10px 18px;
+    }
+
+    main {
+        width: 92%;
+        margin: 24px auto;
+    }
+
+    .hero {
+        padding: 34px 26px;
+    }
+
+    .content-grid {
+        gap: 22px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 430px) {
+    .logo-img {
+        height: 105px;
+    }
+
+    nav a {
+        font-size: 0.95rem;
+    }
+
+    .hero h1 {
+        font-size: 1.55rem;
+        line-height: 1.2;
+    }
+
+    .card {
+        padding: 18px;
     }
 }
