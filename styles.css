@@ -23,14 +23,15 @@ body {
 }
 
 .announcement-track {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 56px;
-    min-width: 200%;
+    width: max-content;
     padding: 8px 0;
     font-weight: bold;
     letter-spacing: 0.2px;
-    animation: announcement-slide 16s linear infinite;
+    will-change: transform;
+    animation: announcement-slide 20s linear infinite;
 }
 
 .announcement-track span {
@@ -42,7 +43,7 @@ body {
         transform: translateX(0);
     }
     to {
-        transform: translateX(-50%);
+        transform: translateX(calc(-50% - 28px));
     }
 }
 
